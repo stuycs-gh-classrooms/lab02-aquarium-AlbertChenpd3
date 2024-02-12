@@ -5,6 +5,7 @@
 - TB+ 0: Albert Chen
 - TB+ 1: Ryan
 - TB+ 2: Haocheng
+- TB+ 3: Richie
 
 ---
 ### Instructions

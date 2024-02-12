@@ -7,6 +7,8 @@ int animalWidth;
 int animalHeight;
 int xSpeed;
 int ySpeed;
+float ratio;
+float hunger;
 
 
 Animal(int x,color c, int aX, int aY, int aW, int aH, int xS, int yS){
