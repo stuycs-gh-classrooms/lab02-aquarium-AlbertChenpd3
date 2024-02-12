@@ -2,9 +2,9 @@
 # Aquarium Lab
 #### Name:
 #### TableBuddies+™
-- TB+ 0:
-- TB+ 1:
-- TB+ 2:
+- TB+ 0: Albert Chen
+- TB+ 1: Ryan
+- TB+ 2: Haocheng
 
 ---
 ### Instructions
