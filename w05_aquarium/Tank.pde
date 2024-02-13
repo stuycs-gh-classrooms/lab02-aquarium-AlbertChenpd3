@@ -30,7 +30,6 @@ fill(150,75,0);
 rect(x,y+aqHeight-floorHeight,aqWidth,floorHeight);
 
 for (int i = 0; i<animalList.size(); i++){animalList.get(i).display();
-println(i);
 animalList.get(i).move();}
 }
 

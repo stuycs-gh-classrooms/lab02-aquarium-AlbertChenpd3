@@ -3,7 +3,8 @@ class ryanCrab extends Animal{
     super(xpos,ypos,xs,ys,xW,yH);
   }
   void display(){
-  float xScaleFactor = float(animalWidth)/170;
+ if (alive == true){
+    float xScaleFactor = float(animalWidth)/170;
   float yScaleFactor = float(animalHeight)/140;
   fill(255,0,0);
   pushMatrix();
@@ -45,6 +46,7 @@ class ryanCrab extends Animal{
   vertex(35*xScaleFactor,120*yScaleFactor);
   endShape(CLOSE);
   popMatrix();
+     }
   }
   void move(){
     animalX += ryanXSpeed; //moves like an animal but with a bit of randomness (okay, maybe more than a bit)

@@ -3,6 +3,7 @@ class ryanFish extends Animal{
     super(xpos,ypos,xs,ys,xW,yH);
   }
   void display(){
+    if (alive == true){
     float xScaleFactor; //multiplies x and y offsets so the fish can still fit in the width and height
     float yScaleFactor;
     xScaleFactor = float(animalWidth)/75;
@@ -42,8 +43,10 @@ class ryanFish extends Animal{
       vertex(animalX+45*xScaleFactor,animalY+5*yScaleFactor);
       vertex(animalX+50*xScaleFactor,animalY+17*yScaleFactor);
       endShape(CLOSE);
-    }
+    }}
   }
+  
+  
   void move(){
     animalX += ryanXSpeed; //moves in a sine wave
     animalY += ryanYSpeed * sin(radians(frameCount));

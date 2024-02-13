@@ -33,6 +33,23 @@ float cy;
   }
 
 
+boolean isAlive(){
+if (hunger > 0){
+  return true;}
+else return false;
+}
+
+
+boolean collideWithFood(food other){
+  if (dist(this.cx,this.cy,other.x,other.y) <= 0){
+return true;
+  }
+else return false;
+}
+
+
+
+
 
 
 Animal(int x, int y, int aww, int ahh){ //Richie constructor
@@ -50,8 +67,9 @@ Animal(int x, int y, int aww, int ahh){ //Richie constructor
 
 
  Animal(int xx, int yy, char c) { //haocheng constuctor
-   cx = xx;
-   cy = yy;
+   animalX = xx;
+   alive = true;
+ animalY  = yy;
    aC = #ff00f7;
    xSpeed = ySpeed = 1;
    animalWidth = 40;
@@ -81,6 +99,7 @@ Animal(int xpos, int ypos, float xs, float ys,int xW, int yH){ //ryan constructo
     ryanYSpeed = ys;
     animalWidth = xW;
     animalHeight = yH;
+    alive = true;
   }
 
 
@@ -95,7 +114,7 @@ animalWidth = aW;
 animalHeight = aH;
 xSpeed = xS;
 ySpeed = yS;
-  
+  alive = true;
 }
 
 
@@ -116,7 +135,7 @@ ySpeed = int(random(-5,5));
 
 void display(){
   fill(aC);
-rect(animalX,animalY,animalWidth,animalHeight);
+if (alive == true){rect(animalX,animalY,animalWidth,animalHeight);}
 
 
   }
@@ -124,8 +143,8 @@ rect(animalX,animalY,animalWidth,animalHeight);
 void move(){
 this.animalX += xSpeed;
 this.animalY += ySpeed;
-if (animalX == 0 || animalX+animalWidth == tankX+tankW){xSpeed = xSpeed * -1;}
-if (animalY ==tankY || animalY+animalHeight ==tankY+tankH-floorH){ySpeed = ySpeed * -1;}
+if (animalX <= 0 || animalX+animalWidth >= tankX+tankW){xSpeed = xSpeed * -1;}
+if (animalY <=tankY || animalY+animalHeight >=tankY+tankH-floorH){ySpeed = ySpeed * -1;}
 }
   
 

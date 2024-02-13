@@ -7,6 +7,7 @@ class richieTurtle extends Animal {
     ah = random(50, 55);
   }
   void display() {
+ if (alive == true){
     fill(0, 48, 32);
     arc(pos.x + aw/3, pos.y + ah/2, aw/1.5, ah, PI, 2*PI, CHORD);
     fill(0, 200, 0);
@@ -18,6 +19,7 @@ class richieTurtle extends Animal {
     if (ryanXSpeed<0) {
       circle(pos.x - aw/6, pos.y + ah/2, aw/3);
     }
+ }
   }
   
    void swim(){

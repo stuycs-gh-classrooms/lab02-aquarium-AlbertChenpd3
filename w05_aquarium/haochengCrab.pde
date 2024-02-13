@@ -7,7 +7,7 @@ class haochengCrab extends Animal {
   }
   void move() {
     if (frameCount%2==0){
-    if (animalX+animalWidth>tankX+tankW || animalX <= tankX) {
+    if (animalX+animalWidth>=tankX+tankW || animalX <= tankX) {
         xSpeed*= -1;
      }
      animalX+= xSpeed;
