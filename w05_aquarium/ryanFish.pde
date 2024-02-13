@@ -1,6 +1,6 @@
 class ryanFish extends Animal{
-  ryanFish(int xpos, int ypos, float xs, float ys,int xW, int yH, Tank t){
-    super(xpos,ypos,xs,ys,xW,yH,t);
+  ryanFish(int xpos, int ypos, float xs, float ys,int xW, int yH){
+    super(xpos,ypos,xs,ys,xW,yH);
   }
   void display(){
     float xScaleFactor; //multiplies x and y offsets so the fish can still fit in the width and height
@@ -45,22 +45,22 @@ class ryanFish extends Animal{
     }
   }
   void move(){
-    animalX += xSpeed; //moves in a sine wave
-    animalY += ySpeed * sin(radians(frameCount));
+    animalX += ryanXSpeed; //moves in a sine wave
+    animalY += ryanYSpeed * sin(radians(frameCount));
     if(animalX + animalWidth > tankX + tankW){
-      xSpeed *= -1;
+      ryanXSpeed *= -1;
       animalX = tankX + tankW - animalWidth;
     }
     if(animalX < tankX){
-      xSpeed *= -1;
+      ryanXSpeed *= -1;
       animalX = tankX;
     }
     if(animalY + animalHeight > tankY + tankH - floorH){
-      ySpeed *= -1;
+      ryanYSpeed *= -1;
       animalY = tankY + tankH - floorH - animalHeight;
     }
     if(animalY < tankY){
-      ySpeed *= -1;
+      ryanYSpeed *= -1;
       animalY = tankY;
     }
   }

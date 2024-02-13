@@ -1,13 +1,13 @@
 class ryanCrab extends Animal{
-  ryanCrab(int xpos, int ypos, float xs, float ys,int xW, int yH, Tank t){
-    super(xpos,ypos,xs,ys,xW,yH,t);
+  ryanCrab(int xpos, int ypos, float xs, float ys,int xW, int yH){
+    super(xpos,ypos,xs,ys,xW,yH);
   }
   void display(){
   float xScaleFactor = float(animalWidth)/170;
   float yScaleFactor = float(animalHeight)/140;
   fill(255,0,0);
   pushMatrix();
-  translate(x,y);
+  translate(animalX,animalY);
   beginShape();
   vertex(15*xScaleFactor,80*yScaleFactor);
   vertex(15*xScaleFactor,60*yScaleFactor);
@@ -47,27 +47,27 @@ class ryanCrab extends Animal{
   popMatrix();
   }
   void move(){
-    x += xSpeed; //moves like an animal but with a bit of randomness (okay, maybe more than a bit)
-    y += ySpeed;
-    if(x + xWidth > tank.tankX + tank.tankW){
-      x = tank.tankX + tank.tankW - xWidth;
-      xSpeed = random(-2,0);
+    animalX += ryanXSpeed; //moves like an animal but with a bit of randomness (okay, maybe more than a bit)
+    animalY += ryanYSpeed;
+    if(animalX + animalWidth > tankX + tankW){
+      animalX = tankX + tankW - animalWidth;
+      ryanXSpeed = random(-2,0);
     }
-    if(x < tank.tankX){
-      x = tank.tankX;
-      xSpeed = random(0,2);
+    if(animalX < tankX){
+      animalX = tankX;
+      ryanXSpeed = random(0,2);
     }
-    if(y + yHeight > tank.tankY + tank.tankH){
-      y = tank.tankY + tank.tankH - yHeight;
-      ySpeed = random(-2,0);
+    if(animalY + animalHeight > tankY + tankH){
+      animalY = tankY + tankH - animalHeight;
+      ryanYSpeed = random(-2,0);
     }
-    if(y < tank.tankY + tank.tankH - tank.floorH){
-      y = tank.tankY + tank.tankH - tank.floorH;
-      ySpeed = random(0,2);
+    if(animalY < tankY + tankH - floorH){
+      animalY = tankY + tankH - floorH;
+      ryanYSpeed = random(0,2);
     }
     float randomVarianceX = random(-.3,.3);
     float randomVarianceY = random(-.3,.3);
-    xSpeed += randomVarianceX;
-    ySpeed += randomVarianceY;
+    ryanXSpeed += randomVarianceX;
+    ryanYSpeed += randomVarianceY;
   }
 }

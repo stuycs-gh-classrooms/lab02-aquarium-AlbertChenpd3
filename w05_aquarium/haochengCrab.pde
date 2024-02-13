@@ -1,6 +1,6 @@
 class haochengCrab extends Animal {
   haochengCrab(int xx, int yy) {
-   super(xx, yy); 
+   super(xx, yy, 'p'); 
    aC=color(255, 0,0);
    animalY = tankY + t.aqHeight - t.floorHeight - animalHeight;
    

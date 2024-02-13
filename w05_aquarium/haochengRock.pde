@@ -1,6 +1,6 @@
 class haochengRock extends Animal {
  haochengRock(int xx, int yy) {
-  super(xx, yy);
+  super(xx, yy,'p');
   ySpeed = 2; 
   aC = #636363;
  }

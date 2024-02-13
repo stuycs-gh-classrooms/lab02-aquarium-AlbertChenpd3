@@ -6,6 +6,13 @@ int aqWidth;
 int aqHeight;
 ArrayList<Animal> animalList = new ArrayList<Animal>();
 
+
+
+
+
+
+
+
 Tank(int aqX, int aqY, int W,int H, int fH){
   floorHeight = fH;
   x = aqX;
@@ -20,17 +27,17 @@ void display(){
 fill(0,255,255);
 rect(x,y,aqWidth,aqHeight);
 fill(150,75,0);
-println(y+aqHeight-floorHeight);
 rect(x,y+aqHeight-floorHeight,aqWidth,floorHeight);
 
 for (int i = 0; i<animalList.size(); i++){animalList.get(i).display();
+println(i);
 animalList.get(i).move();}
 }
 
 
-void addAnimal(int x,int y){
+void addAnimal(){
   Animal newAnimal;
-newAnimal = new Animal(x,y);
+newAnimal = new Animal();
 animalList.add(newAnimal);
 }
 
