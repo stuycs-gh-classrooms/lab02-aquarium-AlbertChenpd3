@@ -24,6 +24,7 @@ void draw() {
 
 void mouseClicked() {
   t.addAnimal();
+  t.addFood();
 }
 
 void keyPressed(){

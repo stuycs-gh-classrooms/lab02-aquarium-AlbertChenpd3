@@ -22,7 +22,7 @@ class richieTurtle extends Animal {
  }
   }
   
-   void swim(){
+   void move(){
     cx = pos.x + aw/2;
     cy = pos.y + ah/2;
     if(alive){

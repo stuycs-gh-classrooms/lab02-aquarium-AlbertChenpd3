@@ -35,19 +35,23 @@ float cy;
 
 boolean isAlive(){
 if (hunger > 0){
+  hunger -=.01;
   return true;}
 else return false;
 }
 
 
 boolean collideWithFood(food other){
-  if (dist(this.cx,this.cy,other.x,other.y) <= 0){
+  if (dist(this.cx,this.cy,other.foodX,other.foodY) <= 0){
 return true;
   }
 else return false;
 }
 
-
+void eatFood(food other){
+  this.hunger += other.nourishment;
+  t.foodList.remove(other);
+}
 
 
 

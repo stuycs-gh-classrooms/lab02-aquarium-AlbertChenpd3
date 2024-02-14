@@ -5,7 +5,7 @@ int y;
 int aqWidth;
 int aqHeight;
 ArrayList<Animal> animalList = new ArrayList<Animal>();
-
+ArrayList<food> foodList= new ArrayList<food>();
 
 
 
@@ -30,7 +30,8 @@ fill(150,75,0);
 rect(x,y+aqHeight-floorHeight,aqWidth,floorHeight);
 
 for (int i = 0; i<animalList.size(); i++){animalList.get(i).display();
-animalList.get(i).move();}
+animalList.get(i).move();
+}
 }
 
 
@@ -39,6 +40,13 @@ void addAnimal(){
 newAnimal = new Animal();
 animalList.add(newAnimal);
 }
+
+void addFood(){
+food newfood;
+newfood = new food(mouseX,mouseY,2.5);
+foodList.add(newfood);
+}
+
 
 
 void moveAnimals(){

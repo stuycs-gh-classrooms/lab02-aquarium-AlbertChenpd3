@@ -9,7 +9,7 @@ class crab extends Animal{
   
   void display(){
   fill(255,165,0);
-   if(alive == true){ rect(t.x,t.y+t.aqHeight-t.floorHeight,animalWidth,animalHeight);}
+   if(isAlive() == true){ rect(t.x,t.y+t.aqHeight-t.floorHeight,animalWidth,animalHeight);}
   
   }
 
