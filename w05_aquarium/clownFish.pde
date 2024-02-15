@@ -6,12 +6,12 @@ super( x, c,  aX,  aY,  aW,  aH,  xS,  yS);
 }
   
 void move(){
-
+if (isAlive() == true){
 this.animalX += xSpeed/2;
 this.animalY += ySpeed/2;
 if (animalX == 0 || animalX+animalWidth >= tankX+tankW){xSpeed = xSpeed * -1;}
 if (animalY ==tankY || animalY+animalHeight >=tankY+tankH-floorH){ySpeed = ySpeed * -1;}
-  
+}
 
 }
 

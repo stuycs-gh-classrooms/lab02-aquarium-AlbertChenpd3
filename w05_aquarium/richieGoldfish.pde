@@ -3,12 +3,12 @@ class richieGoldfish extends Animal {
   float fsize;
   boolean perished;
   boolean STOP;
-  richieGoldfish(int x, int y) {
+  richieGoldfish(int x, int y) { //Constructor
     super(x, y);
     fsize = aw * ah * PI;
     ratio = ah/aw;
   }
-  richieGoldfish(int x, int y, int z, int w) {
+  richieGoldfish(int x, int y, int z, int w) { //Constructor
     super(x, y, z, w);
     fsize = aw * ah * PI;
     ratio = ah/aw;

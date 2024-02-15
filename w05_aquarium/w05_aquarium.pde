@@ -23,7 +23,7 @@ void draw() {
 }
 
 void mouseClicked() {
-  t.addAnimal();
+ // t.addAnimal();
   t.addFood();
 }
 

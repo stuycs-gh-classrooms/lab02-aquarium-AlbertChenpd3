@@ -30,8 +30,12 @@ fill(150,75,0);
 rect(x,y+aqHeight-floorHeight,aqWidth,floorHeight);
 
 for (int i = 0; i<animalList.size(); i++){animalList.get(i).display();
-animalList.get(i).move();
-}
+animalList.get(i).move();}
+
+for (int i = 0; i<foodList.size(); i++){foodList.get(i).display();
+foodList.get(i).move();}
+
+
 }
 
 
@@ -43,7 +47,7 @@ animalList.add(newAnimal);
 
 void addFood(){
 food newfood;
-newfood = new food(mouseX,mouseY,2.5);
+newfood = new food(mouseX,mouseY,2.5,2.5);
 foodList.add(newfood);
 }
 

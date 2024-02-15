@@ -33,11 +33,11 @@ float cy;
   }
 
 
-boolean isAlive(){
+void isAlive(){
 if (hunger > 0){
   hunger -=.01;
-  return true;}
-else return false;
+  ;}
+else alive = false;
 }
 
 
