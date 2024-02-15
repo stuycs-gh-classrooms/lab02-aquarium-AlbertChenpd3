@@ -35,6 +35,6 @@ if (key == '4'){t.animalList.add(new richieTurtle(mouseX,mouseY));}
 if (key == '5'){t.animalList.add(new ryanCrab(mouseX,mouseY,10,10,20,10));}
 if (key == '6'){t.animalList.add(new ryanFish(mouseX,mouseY,10,10,20,10));}
 if (key == '7'){t.animalList.add(new clownFish(mouseX,color(255,125,0), mouseX, mouseY,20, 10, 5, 5));}
-
+if (key == '8'){t.animalList.add(new crab(mouseX));}
 
 }

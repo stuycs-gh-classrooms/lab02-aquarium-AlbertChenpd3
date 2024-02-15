@@ -11,7 +11,7 @@ class haochengRock extends Animal {
    if (animalX+animalWidth>= tankX+tankW || animalX <= tankX) {
         xSpeed*= -1;
      }
-     if (animalY+animalHeight >= tankY + tankH - t.floorHeight) { //Maybe change if it's animalHeight or not
+     if (animalY+animalHeight >= tankY + tankH - t.floorHeight) { 
          ySpeed *= 0;
          xSpeed = 0;
       }

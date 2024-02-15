@@ -6,7 +6,7 @@ super( x, c,  aX,  aY,  aW,  aH,  xS,  yS);
 }
   
 void move(){
-if (isAlive() == true){
+if (alive == true){
 this.animalX += xSpeed/2;
 this.animalY += ySpeed/2;
 if (animalX == 0 || animalX+animalWidth >= tankX+tankW){xSpeed = xSpeed * -1;}
@@ -17,7 +17,7 @@ if (animalY ==tankY || animalY+animalHeight >=tankY+tankH-floorH){ySpeed = ySpee
 
 
 void display(){
-  if (isAlive() == true){
+  if (alive == true){
 fill(255,165,0);
 rect(animalX,animalY,animalWidth,animalHeight);
 fill(255,255,255);

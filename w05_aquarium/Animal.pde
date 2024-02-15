@@ -42,7 +42,7 @@ else alive = false;
 
 
 boolean collideWithFood(food other){
-  if (dist(this.cx,this.cy,other.foodX,other.foodY) <= 0){
+  if (dist(this.cx,this.cy,other.foodX,other.foodY) <= this.animalHeight || dist(this.cx,this.cy,other.foodX,other.foodY) <= this.ah || dist(this.cx,this.cy,other.foodX,other.foodY) <= this.aw || dist(this.cx,this.cy,other.foodX,other.foodY) <= this.animalWidth  ){
 return true;
   }
 else return false;
