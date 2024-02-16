@@ -35,14 +35,16 @@ float cy;
 
 void isAlive(){
 if (hunger > 0){
+  delay(1000);
   hunger -=.01;
   ;}
 else alive = false;
 }
 
 
-boolean collideWithFood(food other){
-  if (dist(this.cx,this.cy,other.foodX,other.foodY) <= this.animalHeight || dist(this.cx,this.cy,other.foodX,other.foodY) <= this.ah || dist(this.cx,this.cy,other.foodX,other.foodY) <= this.aw || dist(this.cx,this.cy,other.foodX,other.foodY) <= this.animalWidth  ){
+
+boolean foodCollide(food other){
+  if (this.animalX <= other.foodX +10 && this.animalX + animalWidth>= other.foodX && this.animalY<= other.foodY + 10 && this.animalY + animalHeight >= other.foodY) {
 return true;
   }
 else return false;
